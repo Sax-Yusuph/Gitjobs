@@ -5,7 +5,7 @@ import ResultTemplate from './ResultTemplate';
 const Results = () => {
     return ( 
         <Box px='12' pt='12'>
-            <Text mb='5'fontWeight='bold' color='blue.800'>7 Product Designer Jobs Found</Text>
+            <Text mb='5'fontWeight='bold' color='purple.800' className='text'>7 Product Designer Jobs Found</Text>
             <SimpleGrid minChildWidth="21rem" spacing="40px">
                 <ResultTemplate />
                 <ResultTemplate />
