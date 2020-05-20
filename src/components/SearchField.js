@@ -45,7 +45,7 @@ const SearchField = () => {
     }
 
     return ( 
-        <Box px='12' py='5' bg={bgColor[colorMode]}>
+        <Box px='12' py='5' bg={bgColor[colorMode]} width='100%'>
             <Flex bg='white' p='3' justify='space-between' align='center' >
                 <InputGroup flexGrow='1'>
                     <InputLeftElement color="gray.300" fontSize="1.2em" children={<Icon name="search" color={color[colorMode]} />} />

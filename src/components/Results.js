@@ -6,7 +6,7 @@ const Results = () => {
     return ( 
         <Box px='12' pt='12'>
             <Text mb='5'fontWeight='bold' color='purple.800' className='text'>7 Product Designer Jobs Found</Text>
-            <SimpleGrid minChildWidth="21rem" spacing="40px">
+            <SimpleGrid minChildWidth="17rem" spacing="30px">
                 <ResultTemplate />
                 <ResultTemplate />
                 <ResultTemplate />
