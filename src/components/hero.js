@@ -3,9 +3,9 @@ import { Flex } from "@chakra-ui/core";
 import SearchField from './SearchField';
 
 
-const Hero = () => (
+const Hero = ({ params, onParamChange }) => (
   <Flex justifyContent="center"  alignItems="center">
-    <SearchField />
+    <SearchField params={params} onParamChange={onParamChange} />
   </Flex>
 );
 
