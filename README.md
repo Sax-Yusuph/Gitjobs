@@ -1,8 +1,10 @@
 
 ## :briefcase::fire: Gitjobs ⚡
-
+ 
 
 > A job board aggregator built with react and [Chakra-ui](https://chakra-ui.com) that posts job listings for software developers. it consumes the Github jobs API, and it is deployed on Firebase
+
+check it [here](https://gitjobs-2b467.web.app/)
 
 ### Features
 
