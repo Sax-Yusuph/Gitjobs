@@ -45,8 +45,8 @@ const Results = ({ loading, jobs, error, jobTitle }) => {
     ) : (
       <Text mb="5" fontWeight="bold" color={color2[colorMode]} className="text">
         opps! no jobs found. Please try another search <br/>
-        <span style={{color: "#A0AEC0"}}> for location, try keywords like remote </span> <br/>
-        <span style={{color: "#A0AEC0"}}> for job title, try keywords like java, javascript, php, ruby </span> 
+        <span style={{color: "#A0AEC0"}}> For location, try keywords like remote. </span> <br/>
+        <span style={{color: "#A0AEC0"}}> For job title, try keywords like java, javascript, php, ruby ... </span> 
       </Text>
     );
 

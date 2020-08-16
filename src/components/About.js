@@ -11,7 +11,7 @@ function About() {
         <p>
           Gitjobs is a job aggregator built with react and chakra-ui. it posts
           job listings for software developers, and it currently consumes the
-          github jobs API. other features would be added in the future versions
+          github jobs API. other features would be added in the future versions.
           <p style={{ marginTop: "5px" }}>Version: 1.0.0</p>
         </p>
       </Flex>
