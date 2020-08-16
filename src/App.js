@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
+import About from "./components/About"
 import {
   theme,
   ThemeProvider,
@@ -40,22 +42,40 @@ function App() {
     <ThemeProvider theme={newTheme}>
       <ColorModeProvider>
         <CSSReset />
-        <Box as="div" className="intro-effect-fadeout modify" pb={3}>
-          <Header />
-          <Hero params={params} onParamChange={handleParamChange} setParams={setParams} />
-          <Results
-            loading={loading}
-            jobTitle={jobTitle}
-            jobs={jobs}
-            error={error}
-            page={page}
-            hasNextPage={hasNextPage}
-            setPage={setPage}
-          />
-        </Box>
-        <Flex justify="center" align="center" color="gray.50" py={5} bg="gray.600" shadow="xl"> 
-            Designed with &#128151; Sax-Yusuph. All rights Reserved. &copy; {new Date().getFullYear()}
-        </Flex>
+        <Router>
+            <Route exact path="/">
+              <Box as="div" className="intro-effect-fadeout modify" pb={3}>
+                <Header />
+                <Hero
+                  params={params}
+                  onParamChange={handleParamChange}
+                  setParams={setParams}
+                />
+                <Results
+                  loading={loading}
+                  jobTitle={jobTitle}
+                  jobs={jobs}
+                  error={error}
+                  page={page}
+                  hasNextPage={hasNextPage}
+                  setPage={setPage}
+                />
+              </Box>
+              <Flex
+                justify="center"
+                align="center"
+                color="gray.50"
+                py={5}
+                bg="gray.700"
+                shadow="xl"
+              >
+                Designed with &#10084; Sax-Yusuph. All rights Reserved. &copy;{" "}
+                {new Date().getFullYear()}
+              </Flex>
+            </Route>
+            <Route exact path="/about" component={About}>
+            </Route>
+        </Router>
       </ColorModeProvider>
     </ThemeProvider>
   );
