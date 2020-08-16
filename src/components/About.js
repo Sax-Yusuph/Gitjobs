@@ -1,34 +1,35 @@
 import React from "react";
 import Header from "./Header";
-import { Box, Flex, Text, Heading } from "@chakra-ui/core";
+import { Flex, Heading } from "@chakra-ui/core";
 
 function About() {
   return (
-    <>
-      <Box as="div" className="intro-effect-fadeout modify" pb={3}>
-        <Header />
-        <Box p={12} h="80vh" textAlign="center">
-          <Heading size="lg">About This App</Heading>
-          <Text size="md" m="auto" textAlign="center">
-            Gitjobs is a job aggregator built with react and chakra-ui. it posts
-            job listings for software developers, and it consumes the github
-            jobs API.
-            <p style={{marginTop: "5px"}}>Version: 1.0.0</p>
-          </Text>
-        </Box>
-      </Box>
+    <Flex flexDir="column" overflow="hidden" minH="100vh">
+      <Header />
+      <Flex m="auto" p={5} textAlign="center" flexDir="column">
+        <Heading size="lg">About This App</Heading>
+        <p>
+          Gitjobs is a job aggregator built with react and chakra-ui. it posts
+          job listings for software developers, and it currently consumes the
+          github jobs API. other features would be added in the future versions
+          <p style={{ marginTop: "5px" }}>Version: 1.0.0</p>
+        </p>
+      </Flex>
       <Flex
         justify="center"
+        justifySelf="flex-end"
+        wrap="wrap"
         align="center"
         color="gray.50"
-        py={5}
+        textAlign="center"
+        p={5}
         bg="gray.700"
         shadow="xl"
       >
         Designed with &#10084; Sax-Yusuph. All rights Reserved. &copy;{" "}
         {new Date().getFullYear()}
       </Flex>
-    </>
+    </Flex>
   );
 }
 

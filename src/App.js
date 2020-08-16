@@ -7,7 +7,6 @@ import {
   ThemeProvider,
   CSSReset,
   ColorModeProvider,
-  Box,
   Flex,
 } from "@chakra-ui/core";
 import useFetchJobs from "./hooks/useFetchJobs";
@@ -44,7 +43,7 @@ function App() {
         <CSSReset />
         <Router>
             <Route exact path="/">
-              <Box as="div" className="intro-effect-fadeout modify" pb={3}>
+              <Flex flexDir="column" overflow="hidden" minH="100vh">
                 <Header />
                 <Hero
                   params={params}
@@ -60,17 +59,20 @@ function App() {
                   hasNextPage={hasNextPage}
                   setPage={setPage}
                 />
-              </Box>
               <Flex
                 justify="center"
+                justifySelf="flex-end"
+                wrap="wrap"
                 align="center"
                 color="gray.50"
-                py={5}
+                textAlign="center"
+                p={5}
                 bg="gray.700"
                 shadow="xl"
               >
                 Designed with &#10084; Sax-Yusuph. All rights Reserved. &copy;{" "}
                 {new Date().getFullYear()}
+              </Flex>
               </Flex>
             </Route>
             <Route exact path="/about" component={About}>

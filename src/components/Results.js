@@ -36,14 +36,22 @@ const Results = ({ loading, jobs, error, jobTitle }) => {
       <Text mb="5" fontWeight="bold" color={color2[colorMode]} className="text">
         {jobs.length} jobs found.
       </Text>
-    ) : error ? "": (
+    ) : error ? (
+      ""
+    ) : loading ? (
       <Text mb="5" fontWeight="bold" color={color2[colorMode]} className="text">
         Searching jobs...
+      </Text>
+    ) : (
+      <Text mb="5" fontWeight="bold" color={color2[colorMode]} className="text">
+        opps! no jobs found. Please try another search <br/>
+        <span style={{color: "#A0AEC0"}}> for location, try keywords like remote </span> <br/>
+        <span style={{color: "#A0AEC0"}}> for job title, try keywords like java, javascript, php, ruby </span> 
       </Text>
     );
 
   return (
-    <Box px="5%" py="12" pos="relative" className="results">
+    <Box px="5%" py="12" pos="relative" className="results" minH="50vh">
       {output}
       {loading && (
         <Flex flexDir="column" align="center">
